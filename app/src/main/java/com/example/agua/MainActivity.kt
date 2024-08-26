@@ -23,6 +23,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.agua.R
@@ -65,7 +66,7 @@ fun UserProfile() {
         Spacer(modifier = Modifier.size(16.dp))
 
         Text(
-            text = "Jennifer Doe",
+            text = "Yostin Arequipa",
             fontSize = 28.sp,
             fontWeight = FontWeight.Bold,
             color = Color.Black
@@ -74,16 +75,16 @@ fun UserProfile() {
         Spacer(modifier = Modifier.size(8.dp))
 
         Text(
-            text = "Android Developer Extraordinaire",
+            text = "Android Developer Senior",
             fontSize = 18.sp,
             color = Color(0xFF4CAF50) // Color verde
         )
 
         Spacer(modifier = Modifier.size(32.dp))
 
-        ContactInfo(icon = R.drawable.telefono, info = "+11 (123) 444 555 666")
-        ContactInfo(icon = R.drawable.compartir, info = "@AndroidDev")
-        ContactInfo(icon = R.drawable.telefono, info = "jen.doe@android.com")
+        ContactInfo(icon = R.drawable.telefono, info = "981643496")
+        ContactInfo(icon = R.drawable.compartir, info = "Yostin.arequipa@tecsup.edu.pe")
+        ContactInfo(icon = R.drawable.telefono, info = "981643496")
     }
 }
 
@@ -104,5 +105,13 @@ fun ContactInfo(icon: Int, info: String) {
             fontSize = 16.sp,
             color = Color.Black
         )
+    }
+}
+
+@Preview (showBackground = true)
+@Composable
+fun DefaultPreview(){
+    AguaTheme{
+        UserProfile()
     }
 }
